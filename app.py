@@ -2,7 +2,7 @@ import datetime
 import os
 import logging
 
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request, jsonify
 from forms import ItemForm
 from models import Items
 from database import db_session
@@ -24,10 +24,12 @@ def add_item():
 def success():
     results = []
 
-    qry = db_session.query(Items)
+    qry = db_session.query(Items).limit(1)
     results = qry.all()
     logging.error(results)
-    return str(results)
+    # return str(results)
+    return render_template('success.html', results=results)
+
 
 
 
