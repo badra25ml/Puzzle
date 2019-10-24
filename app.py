@@ -1,5 +1,6 @@
 import datetime
 import os
+import logging
 
 from flask import Flask, render_template, redirect, url_for
 from forms import ItemForm
@@ -19,15 +20,19 @@ def add_item():
         return redirect(url_for('success'))
     return render_template('index.html', form=form)
 
-@app.route("/success")
+@app.route("/success", methods=['POST', 'GET'])
 def success():
     results = []
- 
+
     qry = db_session.query(Items)
     results = qry.all()
-
+    logging.error(results)
     return str(results)
-  
+
+
+
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

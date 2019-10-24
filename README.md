@@ -1,3 +1,10 @@
+#Things done by Aliou Maiga to have the app running:
+#Corrected the ports in the docker-compose.yml file
+#Changed server_name to localhost in the flaskapp.conf file
+#Did environment export
+#updated the index.html file action to serve the success page
+
+
 # Insight DevOps Engineering Systems Puzzle
 
 ## Table of Contents
@@ -30,12 +37,12 @@ This "bootstraps" the PostgreSQL database with the correct tables. After that yo
 
     docker-compose up -d
 
-At that point, the web application should be visible by going to `localhost:8080` in a web browser. 
+At that point, the web application should be visible by going to `localhost:8080` in a web browser.
 
 Once you've corrected the bugs and have the basic features working, commit the functional codebase to a new repo following the instructions below. As you debug the system, you should keep track of your thought process and what steps you took to solve the puzzle.
 
 ## Instructions to submit your solution
-* Don't schedule your interview until you've worked on the puzzle 
+* Don't schedule your interview until you've worked on the puzzle
 * To submit your entry please use the link you received in your systems puzzle invitation
 * You will only be able to submit through the link one time
 * For security, we will not open solutions submitted via files
@@ -64,4 +71,3 @@ No, you should focus on the functionality. Your engineering team will bring on a
 
 ### Should I use orchestration tools like Kubernetes?
 While technologies like Kubernetes are quite powerful, they're likely overkill for the simple application in this puzzle. We recommend that you stick to Docker Compose for this puzzle.
-
