@@ -3,6 +3,7 @@
 #Changed server_name to localhost in the flaskapp.conf file
 #Did environment export
 #updated the index.html file action to serve the success page
+#Selected the last item in the database to be rendered on success page
 
 
 # Insight DevOps Engineering Systems Puzzle
