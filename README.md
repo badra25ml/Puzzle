@@ -1,4 +1,4 @@
-#Things done by Aliou Maiga to have the app running:
+#Updates:
 #Corrected the ports in the docker-compose.yml file
 #Changed server_name to localhost in the flaskapp.conf file
 #Did environment export
